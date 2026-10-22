@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/spld-vistoria/',
+
   plugins: [
     react(),
 
@@ -23,7 +25,7 @@ export default defineConfig({
 
         display: 'standalone',
 
-        start_url: '/',
+        start_url: '/spld-vistoria/',
 
         icons: [],
       },
