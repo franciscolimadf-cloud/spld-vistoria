@@ -11,23 +11,45 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
 
-      includeAssets: [],
+      includeAssets: [
+        'spld-icon.svg',
+      ],
 
       manifest: {
+        id: '/spld-vistoria/',
+
         name: 'SPLD Vistoria',
         short_name: 'SPLD',
 
         description:
           'Aplicação para realização de vistorias SPLD em empresas de transporte de valores.',
 
+        lang: 'pt-BR',
+
         theme_color: '#172033',
         background_color: '#f3f5f8',
 
         display: 'standalone',
 
+        orientation: 'portrait-primary',
+
+        scope: '/spld-vistoria/',
         start_url: '/spld-vistoria/',
 
-        icons: [],
+        icons: [
+          {
+            src: '/spld-vistoria/spld-icon.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'any',
+          },
+          {
+            src: '/spld-vistoria/spld-icon.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'maskable',
+          },
+        ],
       },
 
       workbox: {
